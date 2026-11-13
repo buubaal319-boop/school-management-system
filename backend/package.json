@@ -1,0 +1,20 @@
+{
+  "name": "school-backend",
+  "version": "2.0.0",
+  "description": "School Management System API (Express + Firebase)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js",
+    "create-admin": "node scripts/create-admin.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "firebase-admin": "^12.6.0",
+    "helmet": "^7.1.0"
+  }
+}

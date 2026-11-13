@@ -1,0 +1,11 @@
+// Deploy with:  firebase deploy --only firestore:rules
+// ALL database access goes through the Express API (Admin SDK bypasses these rules),
+// so the browser is not allowed to read or write Firestore directly.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
